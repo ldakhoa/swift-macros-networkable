@@ -51,7 +51,7 @@ let package = Package(
         .testTarget(
             name: "NetworkableTests",
             dependencies: [
-                "NetworkableMacros",
+                "Networkable",
                 .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax"),
             ]
         ),

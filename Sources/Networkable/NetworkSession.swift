@@ -5,7 +5,7 @@ public final class NetworkSession: NetworkableSession {
     // MARK: - Dpendencies
 
     /// A type can build an URL load request that is independent of protocol or URL scheme.
-    let requestBuilder: URLRequestBuilder
+    let requestBuilder: URLRequestBuildable
 
     /// A list of middlewares that will perform side effects whenever a request is sent or a response is received.
     let middlewares: [Middleware]
@@ -21,7 +21,7 @@ public final class NetworkSession: NetworkableSession {
     ///   - middlewares: A list of middlewares that will perform side effects whenever a request is sent or a response is received.
     ///   - session: An object that coordinates a group of related, network data-transfer tasks.
     public init(
-        requestBuilder: URLRequestBuilder = URLRequestBuilder(),
+        requestBuilder: URLRequestBuildable = URLRequestBuilder(),
         middlewares: [Middleware] = [],
         session: URLSession = .shared
     ) {
