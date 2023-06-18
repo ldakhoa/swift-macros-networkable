@@ -22,7 +22,7 @@ extension Diagnostics {
             fixIts: fixIts
         )
     }
-    
+
     func diagnostic(
         for node: SyntaxProtocol,
         message: String,

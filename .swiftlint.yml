@@ -1,6 +1,8 @@
 included:
   - Sources
   - Tests
+excluded:
+  - Sources/Networkable/MethodMacros.swift
 disabled_rules:
   - function_parameter_count
   - force_try

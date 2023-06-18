@@ -8,7 +8,7 @@ public class MethodMacro: PeerMacro {
         of node: AttributeSyntax,
         providingPeersOf declaration: Declaration,
         in context: Context
-    ) throws -> [DeclSyntax] where Context : MacroExpansionContext, Declaration : DeclSyntaxProtocol {
+    ) throws -> [DeclSyntax] where Context: MacroExpansionContext, Declaration: DeclSyntaxProtocol {
         let method = node.attributeName.description
         print("Method macro: \(method)")
 
