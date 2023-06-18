@@ -118,3 +118,4 @@ extension URLRequestBuilderTests {
         return result
     }
 }
+// swiftlint:enable force_cast

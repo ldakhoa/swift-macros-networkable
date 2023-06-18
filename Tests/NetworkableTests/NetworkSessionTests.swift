@@ -104,3 +104,4 @@ extension NetworkSessionTests {
         StubbedURLProtocol.reset()
     }
 }
+// swiftlint:enable force_cast

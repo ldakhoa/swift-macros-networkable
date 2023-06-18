@@ -3,6 +3,7 @@ included:
   - Tests
 excluded:
   - Sources/Networkable/MethodMacros.swift
+  - Tests/NetworkableTests/TestDoubles
 disabled_rules:
   - function_parameter_count
   - force_try
