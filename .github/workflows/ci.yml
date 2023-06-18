@@ -1,0 +1,24 @@
+name: XCFramify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - "*"
+
+jobs:
+  UnitTest:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.0-beta'
+      - name: SwiftLint
+        run: swiftlint --strict
+      - name: Build Package
+        run: swift build -v
+      - name: Test Package
+        run: swift test -v

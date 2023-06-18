@@ -7,7 +7,7 @@ import CompilerPluginSupport
 let package = Package(
     name: "swift-networkable",
     platforms: [
-        .macOS(.v10_15),
+        .macOS(.v12),
         .iOS(.v13),
         .tvOS(.v13),
         .watchOS(.v6),
@@ -28,6 +28,10 @@ let package = Package(
             url: "https://github.com/apple/swift-syntax.git",
             from: "509.0.0-swift-5.9-DEVELOPMENT-SNAPSHOT-2023-04-25-b"
         ),
+        .package(
+            url: "https://github.com/realm/SwiftLint",
+            from: "0.52.2"
+        ),
     ],
     targets: [
         .macro(
@@ -37,7 +41,11 @@ let package = Package(
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
             ]
         ),
-        .target(name: "Networkable", dependencies: ["NetworkableMacros"]),
+        .target(
+            name: "Networkable",
+            dependencies: ["NetworkableMacros"],
+            plugins: [.plugin(name: "SwiftLintPlugin", package: "SwiftLint")]
+        ),
         .executableTarget(name: "NetworkableClient", dependencies: ["Networkable"]),
         .testTarget(
             name: "NetworkableTests",

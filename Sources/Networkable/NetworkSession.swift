@@ -39,7 +39,7 @@ public final class NetworkSession: NetworkableSession {
         resultQueue: DispatchQueue? = nil,
         decoder: JSONDecoder = JSONDecoder(),
         completionHandler: @escaping (Result<T, Error>) -> Void
-    ) -> URLSessionDataTask? where T : Decodable {
+    ) -> URLSessionDataTask? where T: Decodable {
         // Makes a data task
         dataTask(for: request) { (data: Result<Data, Error>) in
             // Makes a result of data decoding
@@ -65,7 +65,7 @@ public final class NetworkSession: NetworkableSession {
     public func data<T>(
         for request: Request,
         decoder: JSONDecoder = JSONDecoder()
-    ) async throws -> T where T : Decodable {
+    ) async throws -> T where T: Decodable {
         // Makes an URL load request
         let data = try await data(for: request) as Data
         // Decodes the data to result type

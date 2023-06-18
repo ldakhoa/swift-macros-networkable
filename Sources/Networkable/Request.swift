@@ -9,19 +9,19 @@ public protocol Request {
     ///
     /// Reads more at [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
     var headers: [String: String]? { get }
-    
+
     /// A relative URL that identifies the location of a resource.
     ///
     /// If an absolute URL is returned when this object is consumed by `URLRequestBuilder`, it will override the value of `URLRequestBuilder.baseURL`.
     ///
     /// Reads more at [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#absolute_urls_vs_relative_urls).
     var url: String { get }
-    
+
     /// An HTTP method indicate the desired action to be performed for a given resource.
     ///
     /// Reads more at [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).
     var method: Method { get }
-    
+
     /// The data sent as the message body of the request.
     ///
     /// Reads more at [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#body).
