@@ -22,14 +22,4 @@ struct MethodDiagnostics: Diagnostics {
             }
         }
     }
-
-    func asyncAndThrowsRequired(node: FunctionDeclSyntax) -> Diagnostic {
-        diagnostic(
-            for: node,
-            message: DiagnosticType.asyncAndThrowsRequired.message,
-            diagnosticID: DiagnosticType.asyncAndThrowsRequired.rawValue
-        )
-    }
-
-
 }
