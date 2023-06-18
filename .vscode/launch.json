@@ -1,0 +1,28 @@
+{
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"name": "Debug NetworkableClient",
+			"program": "${workspaceFolder:swift-networkable}/.build/debug/NetworkableClient",
+			"args": [],
+			"cwd": "${workspaceFolder:swift-networkable}",
+			"preLaunchTask": "swift: Build Debug NetworkableClient"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"sourceLanguages": [
+				"swift"
+			],
+			"name": "Release NetworkableClient",
+			"program": "${workspaceFolder:swift-networkable}/.build/release/NetworkableClient",
+			"args": [],
+			"cwd": "${workspaceFolder:swift-networkable}",
+			"preLaunchTask": "swift: Build Release NetworkableClient"
+		}
+	]
+}
