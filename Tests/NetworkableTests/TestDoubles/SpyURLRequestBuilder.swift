@@ -5,9 +5,10 @@ final class SpyURLRequestBuilder: URLRequestBuildable, Equatable {
     static func == (lhs: SpyURLRequestBuilder, rhs: SpyURLRequestBuilder) -> Bool {
         lhs.id == rhs.id
     }
-    
+
+    // swiftlint:disable identifier_name
     private let id = UUID()
-    
+
     var invokedBuild = false
     var invokedBuildCount = 0
     var invokedBuildParameters: (request: Request, Void)?

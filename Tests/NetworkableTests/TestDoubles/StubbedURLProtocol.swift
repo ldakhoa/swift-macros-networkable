@@ -2,13 +2,13 @@ import Foundation
 
 final class StubbedURLProtocol: URLProtocol {
     // MARK: Stubbed
-    
+
     static var stubbedData = [URLRequest: Data]()
-    
+
     static var stubbedResponse = [URLRequest: URLResponse]()
-    
+
     static var stubbedResponseError = [URLRequest: Error]()
-    
+
     // MARK: URLProtocol
 
     override class func canInit(with request: URLRequest) -> Bool {
@@ -36,9 +36,9 @@ final class StubbedURLProtocol: URLProtocol {
     }
 
     override func stopLoading() {}
-    
+
     // MARK: Side Effects
-    
+
     static func reset() {
         stubbedData.removeAll()
         stubbedResponse.removeAll()

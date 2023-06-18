@@ -6,6 +6,7 @@ final class SpyMiddleware: Middleware, Equatable {
         lhs.id == rhs.id
     }
 
+    // swiftlint:disable identifier_name
     private let id = UUID()
 
     var invokedPrepare = false

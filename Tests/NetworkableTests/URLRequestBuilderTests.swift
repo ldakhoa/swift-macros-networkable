@@ -1,6 +1,7 @@
 import XCTest
 @testable import Networkable
 
+// swiftlint:disable force_cast
 final class URLRequestBuilderTests: XCTestCase {
     // MARK: Misc
 

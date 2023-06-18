@@ -1,6 +1,7 @@
 import XCTest
 @testable import Networkable
 
+// swiftlint:disable force_cast
 class NetworkSessionTests: XCTestCase {
     // MARK: Misc
 
